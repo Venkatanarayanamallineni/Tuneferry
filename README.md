@@ -1,4 +1,5 @@
 # Tuneferry
+<p align="center"><img src="store/promo.svg" alt="Tuneferry moves playlists between Spotify and YouTube" width="720"></p>
 
 Move playlists between Spotify and YouTube, both ways, in a few clicks. A Chrome extension.
 
