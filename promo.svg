@@ -1,0 +1,121 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-label="Tuneferry moves playlists between Spotify and YouTube">
+<title>Tuneferry</title>
+<defs>
+  <clipPath id="frame"><rect width="1200" height="630" rx="24"/></clipPath>
+  <radialGradient id="gGold" cx=".7" cy=".45" r=".35"><stop offset="0" stop-color="#E2C68C" stop-opacity=".28"/><stop offset="1" stop-color="#E2C68C" stop-opacity="0"/></radialGradient>
+  <radialGradient id="gPlum" cx=".95" cy=".05" r=".5"><stop offset="0" stop-color="#43255E"/><stop offset="1" stop-color="#43255E" stop-opacity="0"/></radialGradient>
+  <radialGradient id="gSea" cx=".05" cy="1" r=".55"><stop offset="0" stop-color="#0D4F5C"/><stop offset="1" stop-color="#0D4F5C" stop-opacity="0"/></radialGradient>
+  <linearGradient id="paper" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#D9D3C8"/><stop offset="1" stop-color="#C4BDB0"/></linearGradient>
+  <linearGradient id="foil" x1="0" y1="0" x2="1" y2=".6" spreadMethod="reflect">
+    <stop offset="0" stop-color="#CDB4CF"/><stop offset=".25" stop-color="#A9C6CF"/><stop offset=".5" stop-color="#D6C79F"/><stop offset=".75" stop-color="#A9C9B4"/><stop offset="1" stop-color="#CDB4CF"/>
+    <animateTransform attributeName="gradientTransform" type="translate" values="0 0; .5 0; 0 0" dur="6s" repeatCount="indefinite"/>
+  </linearGradient>
+  <clipPath id="tk"><path d="M22 0H516A14 14 0 0 0 544 0H598A22 22 0 0 1 620 22V338A22 22 0 0 1 598 360H544A14 14 0 0 0 516 360H22A22 22 0 0 1 0 338V22A22 22 0 0 1 22 0Z"/></clipPath>
+  <filter id="soft" x="-50%" y="-300%" width="200%" height="700%"><feGaussianBlur stdDeviation="18"/></filter>
+</defs>
+
+<style>
+  .serif { font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif; }
+  .sans { font-family: "Segoe UI", system-ui, -apple-system, Helvetica, Arial, sans-serif; }
+  .pearl { fill: #F3EFE8; }
+  .soft { fill: #F3EFE8; fill-opacity: .7; }
+  .ink { fill: #1A2238; }
+  .mute { fill: #545A69; }
+
+  .glow { animation: drift 14s ease-in-out infinite alternate; }
+  @keyframes drift { to { transform: translate(-40px, 24px); } }
+
+  .s1 { opacity: 0; animation: s1 14s infinite; }
+  @keyframes s1 { 0% { opacity: 0; transform: translateY(12px); } 5%, 22% { opacity: 1; transform: none; } 27%, 100% { opacity: 0; transform: none; } }
+
+  .tkt { opacity: 0; animation: tkt 14s infinite; }
+  @keyframes tkt { 0%, 27% { opacity: 0; } 32%, 80% { opacity: 1; } 85%, 100% { opacity: 0; } }
+
+  .float { animation: float 5s ease-in-out infinite alternate; }
+  @keyframes float { to { transform: translateY(-8px); } }
+
+  .flip { transform-box: fill-box; transform-origin: center; animation: flip 14s infinite; }
+  @keyframes flip {
+    0%, 50% { transform: scaleX(1); animation-timing-function: ease-in; }
+    53% { transform: scaleX(0); animation-timing-function: ease-out; }
+    56%, 100% { transform: scaleX(1); }
+  }
+
+  .fr { animation: fr 14s infinite; }
+  @keyframes fr { 0%, 52.9% { opacity: 1; } 53%, 99.9% { opacity: 0; } 100% { opacity: 1; } }
+  .bk { opacity: 0; animation: bk 14s infinite; }
+  @keyframes bk { 0%, 52.9% { opacity: 0; } 53%, 99.9% { opacity: 1; } 100% { opacity: 0; } }
+
+  .dotf { animation: dotf 14s cubic-bezier(.22,.61,.36,1) infinite; }
+  @keyframes dotf { 0%, 35% { transform: translateX(0); } 44%, 100% { transform: translateX(468px); } }
+  .dotb { animation: dotb 14s cubic-bezier(.22,.61,.36,1) infinite; }
+  @keyframes dotb { 0%, 58% { transform: translateX(0); } 68%, 100% { transform: translateX(468px); } }
+
+  .end { opacity: 0; animation: end 14s infinite; }
+  @keyframes end { 0%, 85% { opacity: 0; transform: translateY(12px); } 89%, 97% { opacity: 1; transform: none; } 100% { opacity: 0; transform: none; } }
+
+  @media (prefers-reduced-motion: reduce) {
+    * { animation: none !important; }
+    .s1, .end, .bk { opacity: 0; }
+    .tkt, .fr { opacity: 1; }
+  }
+</style>
+
+<g clip-path="url(#frame)">
+  <rect width="1200" height="630" fill="#121A31"/>
+  <g class="glow">
+    <rect x="-100" y="-100" width="1400" height="830" fill="url(#gPlum)"/>
+    <rect x="-100" y="-100" width="1400" height="830" fill="url(#gSea)"/>
+    <rect x="-100" y="-100" width="1400" height="830" fill="url(#gGold)"/>
+  </g>
+
+  <g class="s1" text-anchor="middle">
+    <text x="600" y="300" class="serif pearl" font-size="76">Your playlist is stuck.</text>
+    <text x="600" y="360" class="sans soft" font-size="22">Spotify on one side. YouTube on the other.</text>
+  </g>
+
+  <g class="tkt">
+    <ellipse cx="600" cy="495" rx="270" ry="20" fill="#04081A" opacity=".55" filter="url(#soft)"/>
+    <g class="float">
+      <g transform="translate(290 110)">
+        <g class="flip">
+          <path d="M22 0H516A14 14 0 0 0 544 0H598A22 22 0 0 1 620 22V338A22 22 0 0 1 598 360H544A14 14 0 0 0 516 360H22A22 22 0 0 1 0 338V22A22 22 0 0 1 22 0Z" fill="url(#paper)"/>
+          <g clip-path="url(#tk)"><rect x="530" y="0" width="90" height="360" fill="url(#foil)"/></g>
+          <line x1="530" y1="18" x2="530" y2="342" stroke="#1A2238" stroke-opacity=".25" stroke-width="2" stroke-dasharray="6 6"/>
+          <text transform="translate(581 180) rotate(-90)" text-anchor="middle" class="sans ink" font-size="15" font-weight="600" letter-spacing="1">Boarding now</text>
+
+          <text x="32" y="52" class="serif ink" font-size="24">Tuneferry</text>
+          <text x="512" y="50" text-anchor="end" class="sans mute" font-size="15">Admit one playlist</text>
+          <text x="32" y="180" class="sans mute" font-size="14">From</text>
+          <text x="512" y="180" text-anchor="end" class="sans mute" font-size="14">To</text>
+          <line x1="38" y1="262" x2="506" y2="262" stroke="#1A2238" stroke-opacity=".3" stroke-width="1.5" stroke-dasharray="5 5"/>
+          <text x="32" y="330" class="sans mute" font-size="15">Free accounts welcome</text>
+          <text x="512" y="330" text-anchor="end" class="sans mute" font-size="15">No sign up</text>
+
+          <g class="fr">
+            <circle cx="38" cy="213" r="6" fill="#1A8F5A"/>
+            <text x="54" y="226" class="serif ink" font-size="40">Spotify</text>
+            <text x="494" y="226" text-anchor="end" class="serif ink" font-size="40">YouTube</text>
+            <circle cx="506" cy="213" r="6" fill="#D23A48"/>
+            <circle class="dotf" cx="38" cy="262" r="7" fill="#9C7A38"/>
+          </g>
+          <g class="bk">
+            <circle cx="38" cy="213" r="6" fill="#D23A48"/>
+            <text x="54" y="226" class="serif ink" font-size="40">YouTube</text>
+            <text x="494" y="226" text-anchor="end" class="serif ink" font-size="40">Spotify</text>
+            <circle cx="506" cy="213" r="6" fill="#1A8F5A"/>
+            <circle class="dotb" cx="38" cy="262" r="7" fill="#9C7A38"/>
+          </g>
+        </g>
+      </g>
+    </g>
+    <text x="600" y="556" text-anchor="middle" class="sans soft" font-size="22">Take it across. Either way.</text>
+  </g>
+
+  <g class="end" text-anchor="middle">
+    <text x="600" y="300" class="serif pearl" font-size="92">Tuneferry</text>
+    <text x="600" y="356" class="sans soft" font-size="22">Spotify and YouTube, both ways. Free accounts welcome.</text>
+    <text x="600" y="596" class="sans soft" font-size="13" fill-opacity=".5">Not made by or connected to Spotify or YouTube.</text>
+  </g>
+</g>
+</svg>
